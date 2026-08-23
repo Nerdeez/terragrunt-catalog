@@ -212,7 +212,8 @@ The root template (`templates/root`) will declare this template as a Boilerplate
 # templates/root/.boilerplate/boilerplate.yml
 dependencies:
   - name: config
-    template-url: ../config/.boilerplate
+    template-url: '{{ replace templateURL "templates/root" "templates/config/.boilerplate" }}'
+    output-folder: .
 ```
 
 Config variables (`OrgId`, `CommonProject`, etc.) are gathered once and passed through to the config dependency. The root template then renders `root.hcl` (including the `catalog {}` block) after `config/` exists.

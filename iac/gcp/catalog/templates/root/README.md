@@ -209,13 +209,14 @@ terragrunt plan   # should show no changes if migration succeeded
 
 ## Relationship to the config template
 
-The root template declares the config template as a Boilerplate dependency:
+The root template declares the config template as a Boilerplate dependency. The URL is derived from the root template source so scaffolding from git/catalog works (a relative `../config` path fails when only `templates/root` is extracted to a temp dir):
 
 ```yaml
 # templates/root/.boilerplate/boilerplate.yml
 dependencies:
   - name: config
-    template-url: ../config/.boilerplate
+    template-url: '{{ replace templateURL "templates/root" "templates/config/.boilerplate" }}'
+    output-folder: .
 ```
 
 Config variables are gathered once and passed through. The root template renders `root.hcl` after `config/` exists.
