@@ -5,6 +5,7 @@ variables:
       Provide the bucket name after creating it with the bootstrap project unit.
     type: string
     order: 7
+    default: ''
 
 dependencies:
   - name: config
