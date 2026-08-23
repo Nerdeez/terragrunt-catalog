@@ -9,5 +9,7 @@ variables:
 
 dependencies:
   - name: config
-    template-url: ../config/.boilerplate
+    # Relative paths break when Terragrunt extracts only templates/root to a temp dir
+    # (catalog/scaffold from git). Derive the config template URL from the same source.
+    template-url: '{{ replace templateURL "templates/root" "templates/config/.boilerplate" }}'
     output-folder: .
