@@ -2,7 +2,7 @@
 
 Boilerplate template for the **live** `config/` folder used by `root.hcl`. This is not a deployable Terragrunt unit — it scaffolds the `config/` directory in your live repository.
 
-This template is a **dependency of the root template** (`templates/root`, next PR). The root template declares it in `boilerplate.yml` so scaffolding `root.hcl` also generates `config/` in one step. You can also scaffold this template on its own — for example when joining an existing project and generating local `*.hcl` files from committed examples.
+This template is a **dependency of the root template** ([`templates/root/`](../root/)). The root template declares it in `boilerplate.yml` so scaffolding `root.hcl` also generates `config/` in one step. You can also scaffold this template on its own — for example when joining an existing project and generating local `*.hcl` files from committed examples.
 
 ## What it generates
 
@@ -40,7 +40,7 @@ A developer cloning a shared live repo sees the example files and `config/README
 
 | Scenario | What to run |
 |----------|-------------|
-| **New live environment** (no `root.hcl` yet) | Scaffold the **root** template (next PR) — it depends on this config template and runs both |
+| **New live environment** (no `root.hcl` yet) | Scaffold the [**root** template](../root/) — it depends on this config template and runs both |
 | **Shared repo** (examples committed, local `*.hcl` missing) | Scaffold this config template directly |
 | **Regenerate config only** | Scaffold this config template directly |
 
@@ -209,7 +209,7 @@ iac/gcp/catalog/templates/config/
 The root template (`templates/root`) will declare this template as a Boilerplate dependency:
 
 ```yaml
-# templates/root/.boilerplate/boilerplate.yml (next PR)
+# templates/root/.boilerplate/boilerplate.yml
 dependencies:
   - name: config
     template-url: ../config/.boilerplate

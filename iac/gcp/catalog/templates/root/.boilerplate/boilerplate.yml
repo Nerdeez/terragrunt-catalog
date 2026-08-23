@@ -1,0 +1,12 @@
+variables:
+  - name: StateBucket
+    description: |
+      GCS bucket for remote state (phase 2). Leave empty for local state (phase 1 bootstrap).
+      Provide the bucket name after creating it with the bootstrap project unit.
+    type: string
+    order: 7
+
+dependencies:
+  - name: config
+    template-url: ../config/.boilerplate
+    output-folder: .

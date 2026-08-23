@@ -18,7 +18,7 @@ Templates can be composed: one template may declare another as a Boilerplate dep
 | Template | Path | Purpose |
 |----------|------|---------|
 | **config** | [`templates/config/`](config/) | `config/` folder — org, billing, and region values |
-| **root** | `templates/root/` *(next PR)* | `root.hcl` — providers, remote state, catalog block |
+| **root** | [`templates/root/`](root/) | `root.hcl` — providers, remote state, catalog block |
 
 More templates may be added here as recurring live patterns emerge.
 
@@ -46,6 +46,8 @@ The root template runs the config template first (prompts for GCP values), then 
 
 1. **No `catalog {}` yet** — pass the catalog repo URL on the CLI: `terragrunt catalog github.com/Nerdeez/terragrunt-catalog`. After `root.hcl` is generated, `terragrunt catalog` works with no arguments.
 2. **`root.hcl` reads `config/*.hcl`** — the config dependency ensures those files exist before `root.hcl` is rendered.
+
+For a new environment, scaffold bootstrap units (folder, project) from the catalog after root — see [`root/README.md`](root/README.md).
 
 ### Join an existing project
 
