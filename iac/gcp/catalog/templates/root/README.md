@@ -130,7 +130,7 @@ terragrunt scaffold \
   --output-folder .
 ```
 
-Leave **`StateBucket` empty** when prompted (or press `x` to skip). Fill in the config prompts (`OrgId`, `CommonProject`, etc.) when asked.
+Leave **`StateBucket` empty** when prompted (press Enter to accept the default). Fill in the config prompts (`OrgId`, `CommonProject`, etc.) when asked.
 
 ### 2. Scaffold bootstrap units
 
@@ -209,13 +209,13 @@ terragrunt plan   # should show no changes if migration succeeded
 
 ## Relationship to the config template
 
-The root template declares the config template as a Boilerplate dependency. The URL is derived from the root template source so scaffolding from git/catalog works (a relative `../config` path fails when only `templates/root` is extracted to a temp dir):
+The root template declares the config template as a Boilerplate dependency. It is fetched from the same git repo at the scaffold `Ref` (defaults to `main`) — Terragrunt only extracts `templates/root` to a temp dir when scaffolding from catalog, so a relative `../config` path is not available.
 
 ```yaml
 # templates/root/.boilerplate/boilerplate.yml
 dependencies:
   - name: config
-    template-url: '{{ replace templateURL "templates/root" "templates/config/.boilerplate" }}'
+    template-url: 'git::https://github.com/Nerdeez/terragrunt-catalog.git//iac/gcp/catalog/templates/config/.boilerplate?ref={{ default "main" (index . "Ref") }}'
     output-folder: .
 ```
 
@@ -227,7 +227,7 @@ Config variables are gathered once and passed through. The root template renders
 iac/gcp/catalog/templates/root/
 ├── README.md                 # this file
 └── .boilerplate/
-    ├── boilerplate.yml       # variables, config dependency
+    ├── boilerplate.yml       # variables, config dependency (git URL)
     └── root.hcl              # Go template
 ```
 

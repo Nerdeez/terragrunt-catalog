@@ -206,13 +206,12 @@ iac/gcp/catalog/templates/config/
 
 ## Relationship to the root template
 
-The root template (`templates/root`) will declare this template as a Boilerplate dependency:
+The root template (`templates/root`) declares this template as a Boilerplate dependency, fetched from git at the scaffold `Ref` (see [`templates/root/.boilerplate/boilerplate.yml`](../root/.boilerplate/boilerplate.yml)):
 
 ```yaml
-# templates/root/.boilerplate/boilerplate.yml
 dependencies:
   - name: config
-    template-url: '{{ replace templateURL "templates/root" "templates/config/.boilerplate" }}'
+    template-url: 'git::https://github.com/Nerdeez/terragrunt-catalog.git//iac/gcp/catalog/templates/config/.boilerplate?ref={{ default "main" (index . "Ref") }}'
     output-folder: .
 ```
 
