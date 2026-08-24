@@ -6,10 +6,11 @@ variables:
     type: string
     order: 7
     default: ''
+    confirm: true
 
 dependencies:
   - name: config
-    # Relative paths break when Terragrunt extracts only templates/root to a temp dir
-    # (catalog/scaffold from git). Derive the config template URL from the same source.
-    template-url: '{{ replace templateURL "templates/root" "templates/config/.boilerplate" }}'
+    # Fetched from git — Terragrunt extracts only templates/root to a temp dir when
+    # scaffolding from catalog, so a relative ../config path is not available.
+    template-url: 'git::https://github.com/Nerdeez/terragrunt-catalog.git//iac/gcp/catalog/templates/config/.boilerplate?ref={{ default "main" (index . "Ref") }}'
     output-folder: .
