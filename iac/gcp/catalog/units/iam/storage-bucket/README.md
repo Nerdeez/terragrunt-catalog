@@ -13,7 +13,7 @@ tags:
 
 Manages IAM bindings on one or more Google Cloud Storage buckets.
 
-This is a **Unit** component. It wraps the [terraform-google-modules/iam/google//modules/storage_buckets_iam](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.1.0/submodules/storage_buckets_iam) submodule (v8.1.0).
+This is a **Unit** component. It wraps the [terraform-google-modules/iam/google//modules/storage_buckets_iam](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.3.0/submodules/storage_buckets_iam) submodule (v8.3.0).
 
 ## Scaffolding
 
@@ -62,7 +62,7 @@ inputs = {
 |-------|------|-------------|
 | `bindings` | `map(list(string))` | Map of role (key) and list of members (value) to add the IAM policies/bindings. |
 
-In [storage_buckets_iam v6.2.0](https://registry.terraform.io/modules/terraform-google-modules/iam/google/6.2.0/submodules/storage_buckets_iam), `bindings` has no default. The catalog unit always prompts for it. (v8.1.0 adds a `{}` default in Terraform; empty bindings still do nothing useful.)
+In [storage_buckets_iam v6.2.0](https://registry.terraform.io/modules/terraform-google-modules/iam/google/6.2.0/submodules/storage_buckets_iam), `bindings` has no default. The catalog unit always prompts for it. (v8.3.0 adds a `{}` default in Terraform; empty bindings still do nothing useful.)
 
 ## Optional inputs
 
@@ -79,4 +79,4 @@ In [storage_buckets_iam v6.2.0](https://registry.terraform.io/modules/terraform-
 | `storage_buckets` | Bucket names (e.g. Terragrunt state bucket). |
 | `bindings` | Often `roles/storage.admin` for an operators group. |
 
-See the [module inputs](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.1.0/submodules/storage_buckets_iam?tab=inputs) for the full list.
+See the [module inputs](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.3.0/submodules/storage_buckets_iam?tab=inputs) for the full list.

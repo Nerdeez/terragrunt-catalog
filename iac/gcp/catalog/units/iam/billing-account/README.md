@@ -13,7 +13,7 @@ tags:
 
 Manages IAM bindings on one or more Google Cloud billing accounts.
 
-This is a **Unit** component. It wraps the [terraform-google-modules/iam/google//modules/billing_accounts_iam](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.1.0/submodules/billing_accounts_iam) submodule (v8.1.0).
+This is a **Unit** component. It wraps the [terraform-google-modules/iam/google//modules/billing_accounts_iam](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.3.0/submodules/billing_accounts_iam) submodule (v8.3.0).
 
 ## Scaffolding
 
@@ -69,4 +69,4 @@ Billing account IDs belong in the **live** repository (`root.hcl` from `config/b
 | `billing_account_ids` | `list(string)` | `[]` | Billing Accounts IDs list to add the IAM policies/bindings. |
 | `mode` | `string` | `"additive"` | Mode for adding the IAM policies/bindings, `additive` and `authoritative`. |
 
-See the [module inputs](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.1.0/submodules/billing_accounts_iam?tab=inputs) for the full list.
+See the [module inputs](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.3.0/submodules/billing_accounts_iam?tab=inputs) for the full list.
