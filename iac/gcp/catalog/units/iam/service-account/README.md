@@ -13,7 +13,7 @@ tags:
 
 Manages IAM bindings on service accounts within a project.
 
-This is a **Unit** component. It wraps the [terraform-google-modules/iam/google//modules/service_accounts_iam](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.1.0/submodules/service_accounts_iam) submodule (v8.1.0).
+This is a **Unit** component. It wraps the [terraform-google-modules/iam/google//modules/service_accounts_iam](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.3.0/submodules/service_accounts_iam) submodule (v8.3.0).
 
 > **Note:** This unit grants IAM **on** service accounts. To **create** service accounts, use the [`service-account`](../../service-account/) catalog unit.
 
@@ -70,7 +70,7 @@ inputs = {
 
 ## Optional inputs
 
-All inputs match the [service_accounts_iam](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.1.0/submodules/service_accounts_iam?tab=inputs) submodule defaults:
+All inputs match the [service_accounts_iam](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.3.0/submodules/service_accounts_iam?tab=inputs) submodule defaults:
 
 | Input | Type | Default | Description |
 |-------|------|---------|-------------|
@@ -89,4 +89,4 @@ All inputs match the [service_accounts_iam](https://registry.terraform.io/module
 | `bindings` | Typical roles include `roles/iam.serviceAccountTokenCreator` for impersonation. |
 | `mode` | Often `authoritative` when the live stack should own the binding set for listed roles. |
 
-See the [module inputs](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.1.0/submodules/service_accounts_iam?tab=inputs) for the full list.
+See the [module inputs](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.3.0/submodules/service_accounts_iam?tab=inputs) for the full list.

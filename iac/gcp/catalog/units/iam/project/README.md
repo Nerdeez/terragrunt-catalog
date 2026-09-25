@@ -13,7 +13,7 @@ tags:
 
 Manages IAM bindings on one or more Google Cloud projects.
 
-This is a **Unit** component. It wraps the [terraform-google-modules/iam/google//modules/projects_iam](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.1.0/submodules/projects_iam) submodule (v8.1.0).
+This is a **Unit** component. It wraps the [terraform-google-modules/iam/google//modules/projects_iam](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.3.0/submodules/projects_iam) submodule (v8.3.0).
 
 ## Scaffolding
 
@@ -59,7 +59,7 @@ inputs = {
 
 ## Optional inputs
 
-All inputs match the [projects_iam](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.1.0/submodules/projects_iam?tab=inputs) submodule defaults:
+All inputs match the [projects_iam](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.3.0/submodules/projects_iam?tab=inputs) submodule defaults:
 
 | Input | Type | Default | Description |
 |-------|------|---------|-------------|
@@ -76,4 +76,4 @@ All inputs match the [projects_iam](https://registry.terraform.io/modules/terraf
 | `bindings` | Role → member map; members use `user:`, `group:`, or `serviceAccount:` prefixes. |
 | `mode` | `additive` is typical when extending existing project IAM. |
 
-See the [module inputs](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.1.0/submodules/projects_iam?tab=inputs) for the full list.
+See the [module inputs](https://registry.terraform.io/modules/terraform-google-modules/iam/google/8.3.0/submodules/projects_iam?tab=inputs) for the full list.

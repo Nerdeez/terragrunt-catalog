@@ -11,7 +11,7 @@ include "root" {
 }
 
 terraform {
-  source = "tfr:///terraform-google-modules/iam/google//modules/service_accounts_iam?version=8.1.0"
+  source = "tfr:///terraform-google-modules/iam/google//modules/service_accounts_iam?version=8.3.0"
 }
 
 inputs = merge(
