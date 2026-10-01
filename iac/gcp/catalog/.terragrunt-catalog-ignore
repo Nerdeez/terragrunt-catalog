@@ -1,0 +1,4 @@
+# Ignore non-catalog paths when this directory is used as a catalog root.
+examples/**
+test/**
+modules/**
