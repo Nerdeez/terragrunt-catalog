@@ -8,7 +8,7 @@ stack "non_prod_temp" {
   source = local.env_stack_path
   path   = "non-prod-temp"
   values = {
-    name                      = "non-prod-temp-2"
+    name                      = "non-prod-temp-4"
     parent_folder_config_path = "${get_repo_root()}/iac/gcp/live/common/folders/root"
     billing_account           = local.billing_account
     project_inputs = {
