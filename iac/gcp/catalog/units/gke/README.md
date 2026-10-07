@@ -122,7 +122,7 @@ Set `spot = true` on a pool map entry for cheaper lab nodes if brief interruptio
 
 ### Outbound internet from private nodes
 
-This unit does **not** create Cloud NAT. Private nodes still need NAT (or permissive routing) to pull images from the public internet unless you use private Artifact Registry and Private Google Access only. Add a router/NAT unit or module in live when needed.
+This unit does **not** create Cloud NAT. Private nodes still need NAT (or permissive routing) to pull images from the public internet unless you use private Artifact Registry and Private Google Access only. Add the [Cloud Router unit](../cloud-router/README.md) in live when needed.
 
 ## Required inputs
 
