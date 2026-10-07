@@ -57,7 +57,9 @@ inputs = merge(
     resource_usage_export_dataset_id      = try(values.resource_usage_export_dataset_id, "")
     enable_network_egress_export          = try(values.enable_network_egress_export, false)
     enable_resource_consumption_export    = try(values.enable_resource_consumption_export, true)
-    cluster_autoscaling = try(values.cluster_autoscaling, {
+    # Node auto-provisioning (NAP) off by default; not exposed via values.* — multiline
+    # object defaults break terragrunt catalog scaffold HCL generation.
+    cluster_autoscaling = {
       enabled                     = false
       autoscaling_profile         = "BALANCED"
       max_cpu_cores               = 0
@@ -72,7 +74,7 @@ inputs = merge(
       image_type                  = "COS_CONTAINERD"
       enable_secure_boot          = false
       enable_integrity_monitoring = true
-    })
+    }
     node_pools_taints                        = try(values.node_pools_taints, {})
     node_pools_tags                          = try(values.node_pools_tags, {})
     node_pools_oauth_scopes                  = try(values.node_pools_oauth_scopes, {})
