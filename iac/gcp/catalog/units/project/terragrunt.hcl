@@ -11,7 +11,7 @@ include "root" {
 }
 
 terraform {
-  source = "tfr:///terraform-google-modules/project-factory/google?version=18.3.0"
+  source = "tfr:///terraform-google-modules/project-factory/google?version=18.4.0"
 }
 
 inputs = merge(
