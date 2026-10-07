@@ -11,7 +11,7 @@ include "root" {
 }
 
 terraform {
-  source = "tfr:///terraform-google-modules/sql-db/google//modules/postgresql?version=28.2.0"
+  source = "tfr:///terraform-google-modules/sql-db/google//modules/postgresql?version=28.3.0"
 }
 
 inputs = merge(
