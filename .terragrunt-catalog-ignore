@@ -8,3 +8,8 @@ iac/**
 iac/gcp/**
 !iac/gcp/catalog
 !iac/gcp/catalog/**
+
+!iac/k8s
+iac/k8s/**
+!iac/k8s/catalog
+!iac/k8s/catalog/**
