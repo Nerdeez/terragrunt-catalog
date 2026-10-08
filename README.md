@@ -37,6 +37,7 @@ The catalog contains reusable **units** (single deployable pieces of infrastruct
 | [`group`](iac/gcp/catalog/units/group/) | Google Workspace / Cloud Identity group |
 | [`service-account`](iac/gcp/catalog/units/service-account/) | GCP service account |
 | [`storage-bucket`](iac/gcp/catalog/units/storage-bucket/) | GCS bucket |
+| [`artifact-registry`](iac/gcp/catalog/units/artifact-registry/) | Artifact Registry repository |
 | [`vpc`](iac/gcp/catalog/units/vpc/) | VPC network |
 | [`db/postgresql`](iac/gcp/catalog/units/db/postgresql/) | Cloud SQL PostgreSQL |
 | [`iam/folder`](iac/gcp/catalog/units/iam/folder/) | IAM bindings on a folder |
